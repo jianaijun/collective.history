@@ -6,3 +6,7 @@ Changelog
 
 - Package created using templer
   [JeanMichel aka toutpt]
+
+- Remove grok dependence
+  [jianaijun]
+

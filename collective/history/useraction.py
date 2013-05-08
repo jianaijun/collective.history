@@ -7,7 +7,6 @@ from zope import interface
 from zope import schema
 from zope.component.interfaces import IObjectEvent
 
-from plone.directives import form
 from plone.i18n.normalizer.interfaces import IIDNormalizer
 from Products.Archetypes.interfaces.event import IObjectEditedEvent,\
     IObjectInitializedEvent
@@ -23,7 +22,7 @@ from plone.registry.interfaces import IRecordModifiedEvent
 LOG = logging.getLogger("collective.history")
 
 
-class IUserAction(form.Schema):
+class IUserAction(interface.Interface):
     """The schema of a user action"""
     id = schema.ASCIILine(title=u"ID")
     what = schema.ASCIILine(title=u"What")
